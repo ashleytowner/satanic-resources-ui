@@ -1,0 +1,26 @@
+query getResource($id: ID!) {
+  resource(id: $id) {
+    id
+    title
+    description
+    image {
+      url
+    }
+    metadata {
+      title
+      value
+    }
+    links {
+      label
+      url
+    }
+    tags {
+      id
+      name
+    }
+    flag {
+      type
+      details
+    }
+  }
+}

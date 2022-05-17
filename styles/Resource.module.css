@@ -1,0 +1,35 @@
+.infoGrid {
+  display: grid;
+  gap: 1rem;
+  /* width: calc(100% - 50px); */
+  /* max-width: 1150px; */
+  margin: 25px auto;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "main" "meta" "tags";
+}
+
+.main {
+  grid-area: main;
+}
+
+.meta {
+  grid-area: meta;
+}
+
+.tags {
+  grid-area: tags;
+}
+
+@media screen and (min-width: 900px) {
+  .infoGrid {
+    grid-template-areas: "main main" "meta tags";
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .infoGrid {
+    grid-template-areas: "main meta" "main tags";
+    grid-template-rows: 3fr 1fr;
+  }
+}

@@ -1,0 +1,17 @@
+query getTag($id: ID!) {
+  tag(id: $id) {
+    name
+    description
+    resources {
+      id
+      title
+      description
+      resourceFormat {
+        name
+      }
+      image {
+        url
+      }
+    }
+  }
+}

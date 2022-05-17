@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background-color: var(--base-bg-color);
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: var(--base-txt-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Philosopher', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+blockquote {
+  padding-left: 1rem;
+  position: relative;
+  border-left: 3px solid var(--accent);
+}
+
+:root {
+  --accent: #e23636;
+  --accent-l1: #d69292;
+  font-size: 16px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --base-bg-color: #dddddd;
+    --base-bg-color-l1: #f9f9f9;
+    --base-bg-color-l2: #fdfdfd;
+    --base-bg-color-l3: #ffffff;
+    --hover-color: #eee;
+    --base-txt-color: black;
+    --surface-shadow: 0 4px 8px 0 rgba(5, 5, 5, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    --danger: #ff4444;
+    --warning: #ffbb33;
+    --success: #00c851;
+    --info: #33b5e5;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --base-bg-color: #111111;
+    --base-bg-color-l1: #222222;
+    --base-bg-color-l2: #333333;
+    --base-bg-color-l3: #444444;
+    --hover-color: #666;
+    --base-txt-color: white;
+    --surface-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    --danger: #cc0000;
+    --warning: #ff8800;
+    --success: #007e33;
+    --info: #0099cc;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply text-3xl
+  }
+  h2 {
+    @apply text-2xl
+  }
+  p {
+    @apply my-2
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-md bg-l1 p-4
+  }
+
+  .box {
+    @apply inline-block py-1 px-2 rounded-md
+  }
+}
+
+@layer utilities {
+  .bg-l0 {
+    background-color: var(--base-bg-color);
+  }
+
+  .bg-l1 {
+    background-color: var(--base-bg-color-l1);
+  }
+
+  .bg-l2 {
+    background-color: var(--base-bg-color-l2);
+  }
+
+  .bg-l3 {
+    background-color: var(--base-bg-color-l3);
+  }
+  
+  .bg-acc {
+    background-color: var(--accent);
+  }
+
+  .h-content {
+    height: fit-content;
+  }
+
+  .blur {
+    filter: blur(10px);
+  }
+}
+
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.text {
+  color: var(--base-txt-color);
+}
